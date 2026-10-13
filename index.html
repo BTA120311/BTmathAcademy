@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basirov Tamir Math Academy | Современная математика</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: { brand: { DEFAULT: '#005AFF', dark: '#0046c7', light: '#e6f0ff' } }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans text-gray-900 bg-white antialiased">
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- ОБНОВЛЕННЫЙ ЛОГОТИП С КАРТИНКОЙ -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="logo.png" alt="BT Math Academy Logo" class="h-10 w-auto transition-transform transform group-hover:scale-105" onerror="this.onerror=null; this.src='https://via.placeholder.com/40x40/005AFF/ffffff?text=B';">
+                    <span class="font-bold text-lg tracking-tight">BT MATH ACADEMY</span>
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">О нас</a>
+                    <a href="#method" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">Методика</a>
+                    <a href="#steps" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">Процесс обучения</a>
+                    <a href="#faq" class="text-sm font-medium text-gray-600 hover:text-brand transition-colors">Вопросы</a>
+                    <a href="#contact" class="bg-brand text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-dark transition-all transform hover:scale-105 shadow-lg shadow-brand/20">Записаться</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand focus:outline-none p-2">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-2xl h-screen">
+            <div class="px-4 pt-4 pb-6 space-y-2 flex flex-col h-full text-center">
+                <a href="#about" class="block px-3 py-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-lg mobile-link">О нас</a>
+                <a href="#method" class="block px-3 py-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-lg mobile-link">Методика</a>
+                <a href="#steps" class="block px-3 py-4 text-lg font-medium text-gray-900 hover:bg-gray-50 rounded-lg mobile-link">Процесс обучения</a>
+                <a href="#contact" class="block px-3 py-4 mt-6 text-lg font-bold text-white bg-brand rounded-xl mobile-link mx-4 shadow-lg shadow-brand/30">Оставить заявку</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <div class="hero-glow"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center z-10 fade-in-up">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-brand/10 text-brand text-sm font-semibold mb-8 border border-brand/20">
+                <span class="flex w-2 h-2 bg-brand rounded-full mr-2"></span>
+                Идет набор учеников в Ташкенте
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 text-gray-900 leading-tight">
+                Математика, которую <br class="hidden md:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-blue-400">понимают дети.</span>
+            </h1>
+            
+            <p class="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-10 leading-relaxed font-light">
+                Современная академия для 0-4 классов. Мы не заставляем зубрить формулы — мы переводим сложный язык учебников на понятный детям язык.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-brand text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-brand-dark transition-all transform hover:-translate-y-1 shadow-xl shadow-brand/30">
+                    Начать с диагностики
+                </a>
+                <a href="#about" class="bg-white text-gray-900 border border-gray-200 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-50 transition-all">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- О НАС -->
+    <section id="about" class="py-24 bg-gray-50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Наставники, а не надзиратели</h2>
+                <p class="text-lg text-gray-500">Обучение по принципу «равный — равному» убирает страх ошибки.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Карточка 1 -->
+                <div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-up">
+                    <h3 class="text-2xl font-bold mb-1">Тамир Басиров <span class="text-gray-400 font-normal text-lg"></span></h3>
+                    <p class="text-brand font-semibold text-sm uppercase mb-6">Основатель академии</p>
+                    <div class="space-y-4 text-gray-600">
+                        <p>Здравствуйте! Мне 15 лет, я учусь в 9-м инженерном классе CANA School. Я не пытаюсь казаться профессором с 30-летним стажем, и именно в этом моя суперсила.</p>
+                        <p>Взрослые педагоги часто забывают, каково это — не понимать базовые вещи. А я помню каждую трудность. Я умею переводить сухой школьный язык на живой и человеческий. Моя цель — показать структуру задачи, чтобы ребенок увидел логику сам, а не ждал готового ответа.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="bg-white p-10 md:p-12 rounded-[2rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 fade-in-up" style="transition-delay: 100ms;">
+                    <h3 class="text-2xl font-bold mb-1">Марсель Шмарин</h3>
+                    <p class="text-brand font-semibold text-sm uppercase mb-6">Сооснователь, куратор</p>
+                    <div class="space-y-4 text-gray-600">
+                        <p>Любой успешный образовательный проект требует четкой системы. Марсель — мой партнер и человек с феноменальной структурностью мышления.</p>
+                        <p>Вместе мы разрабатываем учебные планы, адаптируем нестандартные задачи и проверяем гипотезы. Наш дуэт позволяет смотреть на каждую проблему с двух разных сторон, обеспечивая максимальное качество уроков для ваших детей.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- МЕТОДИКА -->
+    <section id="method" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand rounded-[3rem] p-10 md:p-20 text-white relative fade-in-up shadow-2xl shadow-brand/20 overflow-hidden">
+                <div class="relative z-10 max-w-4xl">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8">Жесткий контроль качества</h2>
+                    <p class="text-xl md:text-2xl font-medium mb-6 text-blue-100 leading-relaxed">
+                        Никакой скучной теории. Уроки строятся на визуализации. Но как мы понимаем, что это работает?
+                    </p>
+                    <p class="text-lg md:text-xl text-white/90 leading-relaxed">
+                        У меня есть младшая сестрёнка. Абсолютно все новые методики, объяснения дробей, уравнений или геометрии мы сначала тестируем на ней. Если она не поняла логику решения с первого раза — мы полностью переписываем урок. До ваших детей доходят только самые кристально понятные материалы, доказавшие свою эффективность.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ШАГИ (Как проходит обучение) -->
+    <section id="steps" class="py-24 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Как строится процесс?</h2>
+                <p class="text-lg text-gray-500">От первого знакомства до уверенных пятерок в школе — прозрачный и понятный путь.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 fade-in-up">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
+                    <h3 class="text-xl font-bold mb-3">Вводная диагностика</h3>
+                    <p class="text-gray-600 leading-relaxed">Мы не учим вслепую. Сначала мы проводим дружелюбный тест в виде головоломок, чтобы найти "слепые зоны" и понять текущий уровень школьника.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 fade-in-up" style="transition-delay: 100ms;">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
+                    <h3 class="text-xl font-bold mb-3">Построение фундамента</h3>
+                    <p class="text-gray-600 leading-relaxed">Закрываем пробелы прошлых лет. Если ребенок не понял базовое сложение, нет смысла учить умножению. Восстанавливаем базу.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 fade-in-up" style="transition-delay: 200ms;">
+                    <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
+                    <h3 class="text-xl font-bold mb-3">Обгон программы</h3>
+                    <p class="text-gray-600 leading-relaxed">Как только база укреплена, мы начинаем внедрять элементы инженерного и логического мышления, чтобы ребенок решал задачи быстрее класса.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Частые вопросы</h2>
+            </div>
+
+            <div class="space-y-4 fade-in-up">
+                <div class="border border-gray-200 rounded-2xl p-2 bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-lg text-gray-900 pr-4">В каком формате проходят занятия?</span>
+                        <svg class="w-6 h-6 text-brand transform transition-transform duration-300 icon flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-600 leading-relaxed">
+                        <p>Уроки проходят индивидуально или в мини-группах. Мы используем интерактивные планшеты и визуальные материалы. Длительность одного занятия специально рассчитана на младший школьный возраст, чтобы ребенок не успел устать и потерять концентрацию.</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-2xl p-2 bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <button class="faq-btn w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none">
+                        <span class="font-semibold text-lg text-gray-900 pr-4">Не слишком ли вы молоды для преподавания?</span>
+                        <svg class="w-6 h-6 text-brand transform transition-transform duration-300 icon flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-600 leading-relaxed">
+                        <p>Именно небольшая разница в возрасте позволяет нам стать для детей авторитетными "старшими братьями". Ребенок не боится сказать "я не понял", как это часто бывает со строгими учителями в школе. Мы создаем психологически комфортную среду.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНТЕГРАЦИЯ ТЕЛЕГРАМ -->
+    <section id="contact" class="py-24 bg-[#0a0f1c] text-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 fade-in-up">
+            <div class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] p-8 md:p-16 shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Готовы начать?</h2>
+                    <p class="text-gray-400 text-lg">Заполните данные ниже. Вы будете перенаправлены в Telegram для выбора времени диагностики.</p>
+                </div>
+                
+                <form id="contact-form" class="space-y-5 max-w-xl mx-auto">
+                    <div>
+                        <input type="text" id="parentName" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand" placeholder="Как к вам обращаться? (Имя)">
+                    </div>
+                    <div>
+                        <input type="tel" id="parentPhone" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand" placeholder="Ваш номер телефона">
+                    </div>
+                    <div>
+                        <select id="childGrade" required class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-500 focus:outline-none focus:border-brand appearance-none [&>option]:text-gray-900">
+                            <option value="" disabled selected>В каком классе ребенок?</option>
+                            <option value="в 0 классе (подготовка)">Дошкольная подготовка (0 класс)</option>
+                            <option value="в 1 классе">1 класс</option>
+                            <option value="во 2 классе">2 класс</option>
+                            <option value="в 3 классе">3 класс</option>
+                            <option value="в 4 классе">4 класс</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="flex items-center justify-center w-full bg-brand hover:bg-brand-dark text-white font-bold text-lg py-4 px-8 rounded-xl transition-all shadow-lg shadow-brand/20 mt-2">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+                        <span id="submit-text">Перейти в Telegram</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ОБНОВЛЕННЫЙ С ЛОГОТИПОМ-КАРТИНКОЙ -->
+    <footer class="bg-black py-10 border-t border-gray-900 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <a href="#" class="inline-flex items-center gap-3 mb-4 opacity-80 hover:opacity-100 transition-opacity">
+                <!-- ОБНОВЛЕННЫЙ ЛОГОТИП С КАРТИНКОЙ В ПОДВАЛЕ -->
+                <img src="logo.png" alt="BT Math Academy Logo" class="h-8 w-auto grayscale" onerror="this.onerror=null; this.src='https://via.placeholder.com/32x32/333333/ffffff?text=B';">
+                <span class="font-bold tracking-tight text-white text-lg">BT MATH ACADEMY</span>
+            </a>
+            <p class="text-gray-500 text-sm mb-2">Ташкент, Узбекистан</p>
+            <p class="text-gray-600 text-xs">&copy; 2026 Basirov Tamir Math Academy. Создано с умом.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
